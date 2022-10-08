@@ -2,5 +2,86 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  border: 1px solid #000;
+  font-family: sans-serif;
+  /* border: 1px solid #000; */
+  background-color: #ccc;
+}
+
+.container {
+  width: min(1440px, 100vw);
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: auto;
+}
+
+.sidebar {
+  background: coral;
+  /* width: clamp(200px, 20%, 300px); */
+  min-width: 150px;
+}
+
+.sidebar-content {
+  position: sticky;
+  top: 0;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 8rem 1fr;
+}
+
+.header {
+  background-color: steelblue;
+  position: sticky;
+  top: 0;
+}
+
+.main-content {
+  background-color: honeydew;
+  display: grid;
+  grid-template-columns: 72% 28%;
+}
+
+.project-container {
+  display: grid;
+  grid-template-rows: 2rem 1fr;
+}
+
+.projects-header {
+  padding: 0.5rem 1rem 0 1rem;
+  position: sticky;
+  top: 8rem;
+  background-color: yellow;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 0.5rem 1rem 1rem;
+}
+
+.project {
+  height: 10rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.rightside {
+  min-width: 150px;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-rows: 40vh 40vh;
+}
+
+.announcements {
+  background-color: pink;
+  position: sticky;
+  top: 8.5rem;
+}
+
+.trending {
+  background-color: aqua;
+  position: sticky;
+  top: calc(8.5rem + 40vh);
 }

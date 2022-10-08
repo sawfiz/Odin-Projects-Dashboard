@@ -14,9 +14,9 @@ A dashboard for the projects I did as part of the Odin Project
 
 ## Things I leaned
 ### HTML
-- 
 
 ### CSS
+- Laying out a webpage completely using grid
 - 
 
 ### JS
