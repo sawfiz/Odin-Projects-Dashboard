@@ -1,19 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush');
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: sans-serif;
   /* border: 1px solid #000; */
+  font-family: "Quicksand";
 }
 
 body {
   background-color: #808080;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  width: min(1430px, 100vw);
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  width: min(1420px, 100vw);
+  /* display: grid; */
+  /* grid-template-columns: 1fr 5fr; */
   margin: auto;
   background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
   background-size: cover;
@@ -22,7 +30,7 @@ body {
 
 .sidebar {
   background: #0006;
-  min-width: 150px;
+  min-width: 100px;
   padding: 0 1rem;
 }
 
@@ -31,12 +39,12 @@ body {
   position: sticky;
   top: 0;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   gap: 1rem;
 }
 
 .menu-header {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-top: 2rem;
   letter-spacing: 2px;
@@ -54,7 +62,7 @@ body {
 }
 
 .menu-item {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   letter-spacing: 1px;
   display: flex;
@@ -67,21 +75,43 @@ main {
 }
 
 .header {
-  background-color: #2b6478;
-  background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+  /* background-color: #2b6478; */
+  /* background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'); */
   position: sticky;
   top: 0;
+  /* z-index: 5; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding: 1rem;
+  background-color: #0006;
 }
 
 h1 {
-  color: white;
+  color: #eee;
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  font-family: "Caveat Brush";
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+
+.github-name {
+  color: #ccc;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
 }
 
 .main-content {
-  display: grid;
-  grid-template-columns: 18fr 7fr;
+  width: 75%;
+  margin: auto;
+  margin-top: 1rem;
+  /* display: grid; */
+  /* grid-template-columns: 4fr 1fr; */
+  /* background-color: #0001; */
+  /* display: flex;
+  justify-content: center; */
 }
 
 .project-container {
@@ -89,45 +119,50 @@ h1 {
   grid-template-rows: 2rem 1fr;
 }
 
-.header-2 {
+h2 {
   padding: 1rem 1rem 0.5rem 1rem;
   /* background-color: #285c6e; */
   font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+  /* color: white; */
 }
 
-/* .projects-container .header-2 {
-  position: sticky;
-  top: 8rem;
-} */
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
 
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 2.5rem;
   padding: 0 0.5rem 1rem 1rem;
 }
 
 .project {
-  height: 16rem;
+  height: 20rem;
   padding: 1rem;
   background-color: #fff;
-  border-left: 8px solid #e7b74d;
+  border-left: 8px solid #ccc;
   border-radius: 8px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  transition: 0.5s;
+}
+.project:hover {
+  border-left: 8px solid #e7b74d;
+  scale: 1.05;
 }
 .project-name {
   grid-area: 1 / 1 / 2 / 4;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  font-weight: bold;
 }
 .course {
   grid-area: 1 / 4 / 2 / 6;
   font-size: 1rem;
-  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   text-align: right;
   color: #e7b74d;
@@ -145,19 +180,19 @@ h1 {
   grid-area: 4 / 5 / 5 / 6;
   margin-top: 0.5rem;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 .github-link {
   grid-area: 5 / 5 / 6 / 6;
   margin-top: 0.5rem;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 .odin-link {
   grid-area: 6 / 5 / 7 / 6;
   margin-top: 0.5rem;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 .rightside {
@@ -192,4 +227,5 @@ h1 {
 .list-item {
   padding: 0.5rem;
   border-bottom: 2px solid #ccc;
+  font-size: 0.8rem;
 }

@@ -39,7 +39,7 @@ const libraryPrj = new Project(
 addToProjects(libraryPrj);
 
 const dashboardPrj = new Project(
-    'A dashboard of projects',
+    'A Dashboard of My Projects',
     'Int. HTML & CSS',
     'See I realize my dreams here. <br>A dashboard of all the projects I worked on.',
     'images/dashboard Medium.jpeg',
@@ -48,7 +48,6 @@ const dashboardPrj = new Project(
     'https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard'
   );
   addToProjects(dashboardPrj);
-
 
 const signUpPrj = new Project(
   'Sign-up Form',
@@ -124,14 +123,16 @@ function displayProjects() {
 
     const liveLinkEl = document.createElement('a');
     liveLinkEl.className = 'live-link';
+    liveLinkEl.title = "Open web page"
     liveLinkEl.innerHTML =
-      '<img src="icons/icons8-external-link-48.svg" width="32px" alt="link to github">';
+      '<img src="icons/icons8-external-link-48.svg" width="32px" alt="link to live site">';
     liveLinkEl.href = project.liveLink;
     projectEl.appendChild(liveLinkEl);
     console.log('liveLink ', liveLinkEl);
 
     const githubLinkEl = document.createElement('a');
     githubLinkEl.className = 'github-link';
+    githubLinkEl.title = "Open github repository"
     githubLinkEl.innerHTML =
       '<img src="icons/icons8-github-64.svg" width="32px" alt="link to github">';
     githubLinkEl.href = project.githubLink;
@@ -140,6 +141,7 @@ function displayProjects() {
 
     const odinLinkEl = document.createElement('a');
     odinLinkEl.className = 'odin-link';
+    odinLinkEl.title = "Open the Odin Project page"
     odinLinkEl.innerHTML =
       '<img src="icons/odin-64.png" height="32px" alt="link to the Odin Project">';
     odinLinkEl.href = project.odinLink;
