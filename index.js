@@ -153,3 +153,13 @@ function displayProjects() {
 }
 
 displayProjects();
+
+// Click on a project thumbnail the live link in a new tab.
+const projectEls = Array.from(document.querySelectorAll('.project'))
+projectEls.forEach(projectEl => {
+  const thumbnail = projectEl.querySelector('.project-thumbnail')
+  const liveLink = projectEl.querySelector('.live-link')
+  thumbnail.addEventListener('click', () => {
+    window.open(liveLink)
+  })
+})
