@@ -19,6 +19,7 @@ A dashboard for the projects I did as part of the Odin Project
 ### CSS
 - Laying out a webpage completely using grid
 - Making some grids sticky
+- Making grid card auto-fit and wrap
 - Making the page responsive
 
 ### JS
