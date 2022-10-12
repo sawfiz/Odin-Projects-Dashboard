@@ -14,6 +14,7 @@ A dashboard for the projects I did as part of the Odin Project
 
 ## Things I leaned
 ### HTML
+- `<a href="https://www.w3schools.com" target="_blank">Visit W3Schools</a>` to open a link in a new tab
 
 ### CSS
 - Laying out a webpage completely using grid
