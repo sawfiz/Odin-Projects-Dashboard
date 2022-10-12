@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  width: min(1420px, 100vw);
+  width: 100vw;
   /* display: grid; */
   /* grid-template-columns: 1fr 5fr; */
   margin: auto;
@@ -104,7 +104,7 @@ h1 {
 }
 
 .main-content {
-  width: 75%;
+  width: 95%;
   margin: auto;
   margin-top: 1rem;
   /* display: grid; */
@@ -114,10 +114,10 @@ h1 {
   justify-content: center; */
 }
 
-.project-container {
+/* .project-container {
   display: grid;
   grid-template-rows: 2rem 1fr;
-}
+} */
 
 h2 {
   padding: 1rem 1rem 0.5rem 1rem;
@@ -134,13 +134,12 @@ h3 {
 
 .projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2.5rem;
   padding: 0 0.5rem 1rem 1rem;
 }
 
 .project {
-  height: 20rem;
   padding: 1rem;
   background-color: #fff;
   border-left: 8px solid #ccc;
