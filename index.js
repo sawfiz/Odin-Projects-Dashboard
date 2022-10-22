@@ -27,6 +27,17 @@ function addToProjects(project) {
   projects.push(project);
 }
 
+const ticTacToePrj = new Project(
+  'Tic-Tac-Toe',
+  'Javascript',
+  'Challenge yourself against human, computer, and unbeatable AI algorithm!',
+  'images/Tic-Tac-Toe Medium.jpeg',
+  'https://sawfiz.github.io/Tic-Tac-Toe/',
+  'https://github.com/sawfiz/Tic-Tac-Toe',
+  'https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe'
+);
+addToProjects(ticTacToePrj);
+
 const libraryPrj = new Project(
   'Library',
   'Javascript',
