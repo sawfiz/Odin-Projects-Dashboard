@@ -8,6 +8,7 @@ const projects = [];
 function Project(
   name,
   course,
+  courseLink,
   description,
   thumbnail,
   liveLink,
@@ -16,6 +17,7 @@ function Project(
 ) {
   this.name = name;
   this.course = course;
+  this.courseLink = courseLink;
   this.description = description;
   this.thumbnail = thumbnail;
   this.liveLink = liveLink;
@@ -30,6 +32,7 @@ function addToProjects(project) {
 const ticTacToePrj = new Project(
   'Tic-Tac-Toe',
   'Javascript',
+  'https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript',
   'Challenge yourself against human, computer, and unbeatable AI algorithm!',
   'images/Tic-Tac-Toe Medium.jpeg',
   'https://sawfiz.github.io/Tic-Tac-Toe/',
@@ -41,6 +44,7 @@ addToProjects(ticTacToePrj);
 const libraryPrj = new Project(
   'Library',
   'Javascript',
+  'https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript', 
   'Manage your books.  Add, edit, remove, and track them through an intuitive web interface.',
   'images/Library Medium.jpeg',
   'https://sawfiz.github.io/Library/',
@@ -52,6 +56,7 @@ addToProjects(libraryPrj);
 const dashboardPrj = new Project(
   'A Dashboard of My Projects',
   'Int. HTML & CSS',
+  'https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css',
   'See I realize my dreams here. <br>A dashboard of all the projects I worked on.',
   'images/dashboard Medium.jpeg',
   'https://sawfiz.github.io/Odin-Projects-Dashboard/',
@@ -63,6 +68,7 @@ addToProjects(dashboardPrj);
 const signUpPrj = new Project(
   'Sign-up Form',
   'Int. HTML & CSS',
+  'https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css',
   'We must join with him.  We must join with Sauron! <br>Sign up now to join the Uruk-hai army!',
   'images/sign-up-form Medium.jpeg',
   'https://sawfiz.github.io/sign-up-form/',
@@ -74,6 +80,7 @@ addToProjects(signUpPrj);
 const calculatorPrj = new Project(
   'A calculator',
   'Foundations',
+  'https://www.theodinproject.com/paths/foundations/courses/foundations',
   'A handy calculator, much like the first one you got as a kid years ago.',
   'images/calculator Medium.jpeg',
   'https://sawfiz.github.io/calculator/',
@@ -85,6 +92,7 @@ addToProjects(calculatorPrj);
 const sketchPrj = new Project(
   'Etch-a-sketch',
   'Foundations',
+  'https://www.theodinproject.com/paths/foundations/courses/foundations',
   'A neat toy to flex your drawing skills. <br>Remember to save some screenshots!',
   'images/Etch-a-sketch Medium.jpeg',
   'https://sawfiz.github.io/Etch-A-Sketch/',
@@ -96,6 +104,7 @@ addToProjects(sketchPrj);
 const rockPrj = new Project(
   'Rock Paper Scissors',
   'Foundations',
+  'https://www.theodinproject.com/paths/foundations/courses/foundations',
   'That grade-school classic. Still handy when you and your buddies find it difficult to agree on something.',
   'images/rock-paper-scissors Medium.jpeg',
   'https://sawfiz.github.io/rock_paper_scissors/',
@@ -116,8 +125,9 @@ function displayProjects() {
     nameEl.innerText = project.name;
     projectEl.appendChild(nameEl);
 
-    const courseEl = document.createElement('div');
+    const courseEl = document.createElement('a');
     courseEl.className = 'course';
+    courseEl.href = project.courseLink;
     courseEl.innerText = project.course;
     projectEl.appendChild(courseEl);
 
