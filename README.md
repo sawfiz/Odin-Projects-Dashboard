@@ -23,7 +23,7 @@ A dashboard for the projects I did as part of the Odin Project
 - Making the page responsive
 
 ### JS
-- Open a link uisng window.open()
+- Open a link in a new tab using window.open()
 
 ## To do
 - How to add a favicon
