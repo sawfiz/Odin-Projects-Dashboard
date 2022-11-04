@@ -33,7 +33,7 @@ const restaurantPagePrj = new Project(
   'Restaurant at the End of the Universe',
   'Javascript',
   'https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript',
-  'Milliways, a five-star restaurant from the Hictchhiker\'s Guide to the Galaxy, where you get to view the Gnab Gib. ',
+  'Milliways, a five-star restaurant from the Hictchhiker\'s Guide to the Galaxy, where you get to view the Gnab Gib (Big Bang in reverse). ',
   'images/Milliwas Medium.jpeg',
   'https://sawfiz.github.io/restaurant-at-the-end-of-the-universe/',
   'https://github.com/sawfiz/restaurant-at-the-end-of-the-universe',
